@@ -7,7 +7,7 @@ import {
 	Grid,
 	Typography,
 } from '@material-ui/core'
-import { useForm, FormProvider, Controller } from 'react-hook-form'
+import { useForm, FormProvider } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 
 import { commerce } from '../../lib/commerce'
@@ -88,12 +88,7 @@ const AddressForm = ({ checkoutToken, test }) => {
 					)}
 				>
 					<Grid container spacing={3}>
-						<FormInput
-							required
-							name='firstName'
-							defaultValue={''}
-							label='First name'
-						/>
+						<FormInput required name='firstName' label='First name' />
 						<FormInput required name='lastName' label='Last name' />
 						<FormInput required name='address1' label='Address line 1' />
 						<FormInput required name='email' label='Email' />
